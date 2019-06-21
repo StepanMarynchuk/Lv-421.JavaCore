@@ -5,22 +5,25 @@
 77777
 
 57
+13333
 
-
-
-
+hello! have a great evening 
 
 Na vkraini
 
 Dobryi den
-Yak umru to pohovaite
-Mene na mogili
 I Dnipro, I kruchi
 
+<<<<<<< HEAD
 4 riadok
 pislia
-
+=======
 
 10
+
+Yak umru to pohovayte
+>>>>>>> cfe4d2bdad8d9a7380439028d888cc60befa5b7c
+
+
 
 
