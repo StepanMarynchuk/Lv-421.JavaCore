@@ -22,7 +22,7 @@ Yak umru to pohovaite
 Mene na mogili
 
 I Dnipro, I kruchi
-
+Bulo vydno bulo tcuty
 
 4 riadok
 pislia
@@ -36,6 +36,7 @@ Mene na mogili
 
 
 10
+999
 
 
 =======
