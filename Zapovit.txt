@@ -1,12 +1,14 @@
-
-11riadok
+1 riad
+2 riad
 Dobryi den to Pavlo vshe 3 raz probyiy
-
-
+LOL
+lalalend
 23333
 11111111
 
-77777
+13131313131313131
+
+lalalend 1787
 
 57
 13333
@@ -20,7 +22,7 @@ Yak umru to pohovaite
 Mene na mogili
 
 I Dnipro, I kruchi
-
+Bulo vydno bulo tcuty
 
 4 riadok
 pislia
@@ -29,11 +31,13 @@ pislia
 10
 
 Yak umru to pohovayte
-
+Mene na mogili
 
 
 
 10
+
 from branch
 
+999
 
