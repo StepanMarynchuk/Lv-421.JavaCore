@@ -8,30 +8,31 @@ public class calculator {
         int num2 = getInt();
         char operation = getOperation();
         int result = calc(num1,num2,operation);
-        System.out.println("Результат операции: "+result);
+        System.out.println("Operation result: "+result);
     }
  
     public static int getInt(){
-        System.out.println("Введите число:");
+        System.out.println("Insert the number:");
         int num;
         if(scanner.hasNextInt()){
             num = scanner.nextInt();
         } else {
-            System.out.println("Вы допустили ошибку при вводе числа. Попробуйте еще раз.");
-            scanner.next();//рекурсия
+            System.out.println("You made a mistake when entering a number. Try again.");
+            scanner.next();//recursion
             num = getInt();
         }
         return num;
     }
  
     public static char getOperation(){
-        System.out.println("Введите операцию:");
+        System.out.println("
+Enter operation:");
         char operation;
         if(scanner.hasNext()){
             operation = scanner.next().charAt(0);
         } else {
-            System.out.println("Вы допустили ошибку при вводе операции. Попробуйте еще раз.");
-            scanner.next();//рекурсия
+            System.out.println("You made a mistake when entering a number. Try again.");
+            scanner.next();//recursion
             operation = getOperation();
         }
         return operation;
@@ -53,7 +54,7 @@ public class calculator {
                 result = num1/num2;
                 break;
             default:
-                System.out.println("Операция не распознана. Повторите ввод.");
+                System.out.println("The operation is not recognized. Repeat entry.");
                 result = calc(num1, num2, getOperation());//рекурсия
         }
         return result;
