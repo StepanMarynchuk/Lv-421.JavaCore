@@ -54,7 +54,10 @@ public class Person {
 	}
 	
 	public int getAge() {
+		if (birthYer != 0)
 		return 2019 - birthYer;
+		else
+			return 0;
 	}
 	
 	public void input(String firstName, String lastName, int birthYer ) {
@@ -75,7 +78,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return seqNumber + " Person [firstName = " + firstName + ", lastName = " + lastName + ", birthYer = " + birthYer + "]";
+		return seqNumber + " Person [firstName = " + firstName + ", lastName = " + lastName + ", birthYer = " + birthYer +", Age = " + getAge() + "]";
 	}
 
 }
