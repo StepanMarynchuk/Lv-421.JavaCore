@@ -16,5 +16,5 @@ System.out.println(dog.getBonuses());
 System.out.println(man.getBonuses());	
 System.out.println(woman.getBonuses());	
 	}
-
+//commit
 }
