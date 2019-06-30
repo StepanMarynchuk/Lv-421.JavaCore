@@ -1,11 +1,15 @@
 package less3;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.time.LocalDate;
 
 public class Person {
 	
 	private String firstName;
 	private String lastName;
-	private int birthYer;
+	private int birthYear;
 	private int seqNumber;
 	private static int number;
 
@@ -13,20 +17,18 @@ public class Person {
 	public Person(String firstName, String lastName, int birthYer) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.birthYer = birthYer;
-		number++;
-		seqNumber = number;
+		this.birthYear = birthYer;
+		seqNumber = ++number;
 	}
 	
 	public Person(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		number++;
-		seqNumber = number;
+		seqNumber = ++number;
 	}
+	
 	public Person() {
-		number++;
-		seqNumber = number;
+		seqNumber = ++number;
 	} 
 
 	public String getFirstName() {
@@ -46,24 +48,29 @@ public class Person {
 	}
 
 	public int getBirthYer() {
-		return birthYer;
+		return birthYear;
 	}
 
 	public void setBirthYer(int birthYer) {
-		this.birthYer = birthYer;
+		this.birthYear = birthYer;
 	}
 	
 	public int getAge() {
-		if (birthYer != 0)
-		return 2019 - birthYer;
+		LocalDate date =  LocalDate.now();
+		if (birthYear != 0)
+			return (date.getYear() - birthYear);
 		else
 			return 0;
 	}
 	
-	public void input(String firstName, String lastName, int birthYer ) {
-		setFirstName(firstName);
-		setLastName(lastName);
-		setBirthYer(birthYer);	
+	public void input() throws IOException  {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter First Name:");
+		setFirstName(br.readLine());
+		System.out.println("Enter Last Name:");
+		setLastName(br.readLine());
+		System.out.println("Enter Birth Year:");
+		setBirthYer(Integer.parseInt(br.readLine()));	
 	}
 	
 	public void output() {
@@ -78,7 +85,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return seqNumber + " Person [firstName = " + firstName + ", lastName = " + lastName + ", birthYer = " + birthYer +", Age = " + getAge() + "]";
+		return seqNumber + " Person [firstName = " + firstName + ", lastName = " + lastName + ", birthYear = " + birthYear +", Age = " + getAge() + "]";
 	}
 
 }
