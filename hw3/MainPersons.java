@@ -23,8 +23,10 @@ public class MainPersons {
 		person5.output();
 		System.out.println("---------------------");
 		
+		System.out.println("We created a new person:");
 		Person person6 = new Person();
 		person6.output();
+		System.out.println("You must enter his data");
 		person6.input();
 		person6.output();
 		System.out.println("---------------------");

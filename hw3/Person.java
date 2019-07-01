@@ -12,6 +12,7 @@ public class Person {
 	private int birthYear;
 	private int seqNumber;
 	private static int number;
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 	
 	public Person(String firstName, String lastName, int birthYer) {
@@ -64,7 +65,6 @@ public class Person {
 	}
 	
 	public void input() throws IOException  {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter First Name:");
 		setFirstName(br.readLine());
 		System.out.println("Enter Last Name:");
