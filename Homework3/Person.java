@@ -1,28 +1,37 @@
-import java.util.Calendar;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.time.LocalDate;
 
 public class Person {
 private String firstName;
 private  String lastName;
 private int birthYear;
-private int age;
 
-public void calculateAge(){
-    setAge(Calendar.getInstance().get(Calendar.YEAR) - birthYear);
+
+public int calculateAge(){
+	LocalDate date = LocalDate.now();
+    LocalDate year = date.minusYears(birthYear);
+    return year.getYear();
 }
 
-public void Input(String name,String surname,int birth){
+public void Input() throws IOException{
+	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	System.out.println("Input person`s name, surname and birth year");
+	String name = br.readLine();
+	String surname = br.readLine();
+	int birth = Integer.parseInt(br.readLine());
     setFirstName(name);
     setLastName(surname);
-    setBirthYer(birth);
-    calculateAge();
+    setBirthYear(birth);
 }
 
 public void output(){
         System.out.println( "Person{" +
                 "firstName='" + getFirstName() + '\'' +
                 ", lastName='" + getLastName() + '\'' +
-                ", birthYer=" + getBirthYer() +
-                ", age=" + getAge() +
+                ", birthYear=" + getBirthYear() +
+                ", age=" + calculateAge() +
                 '}');
 
 }
@@ -56,29 +65,12 @@ public void changeName(String name,String surname){
         this.lastName = lastName;
     }
 
-    public int getBirthYer() {
-        return birthYear;
-    }
-
-    public void setBirthYer(int birthYer) {
-        this.birthYear = birthYer;
-    }
-    
-
     public int getBirthYear() {
 		return birthYear;
 	}
 
 	public void setBirthYear(int birthYear) {
 		this.birthYear = birthYear;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	public int getAge() {
-		return age;
 	}
 	
 	public Person() {
@@ -88,8 +80,5 @@ public void changeName(String name,String surname){
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthYear = birthYear;
-        calculateAge();
     }
-
-	
 }
