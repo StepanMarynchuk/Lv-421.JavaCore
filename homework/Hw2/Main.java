@@ -1,6 +1,5 @@
 package com.softserve;
 
-
 import java.io.IOException;
 
 public class Main {
