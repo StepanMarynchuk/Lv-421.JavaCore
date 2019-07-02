@@ -49,7 +49,7 @@ public class Person {
 
     public int getAge() {
         LocalDate date = LocalDate.now ();
-        if (birthYear >= 0)
+        if (birthYear > 0)
             return (date.getYear () - birthYear);
         else
             return 0;
