@@ -9,7 +9,7 @@ public class FloatNumbers{
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner (System.in);
 
-        System.out.println ("Enter any number");
+        System.out.println ("Input any float number");
         float n = sc.nextFloat ();
 
         if (n >= -5.0F && n <= 5.0F) {
