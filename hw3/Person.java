@@ -13,7 +13,7 @@ public class Person {
 	private int seqNumber;
 	private static int number;
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+	LocalDate date =  LocalDate.now();
 	
 	public Person(String firstName, String lastName, int birthYer) {
 		this.firstName = firstName;
@@ -57,7 +57,6 @@ public class Person {
 	}
 	
 	public int getAge() {
-		LocalDate date =  LocalDate.now();
 		if (birthYear != 0)
 			return (date.getYear() - birthYear);
 		else
