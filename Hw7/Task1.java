@@ -28,4 +28,4 @@ import java.io.InputStreamReader;
             System.out.println("Reverse word is:" + ' ' + reverseWord);
 
         }
-    }
+    } 
