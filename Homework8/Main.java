@@ -41,7 +41,7 @@ public class Main {
 	private static void task3(BufferedReader br) throws IOException {
 		System.out.println("Enter a sentence with money");
 		String sentance = br.readLine();
-		String pattern = "\\$\\d+.\\d{2}";
+		String pattern = "\\$\\d+\\.\\d{2}";
 		Pattern p = Pattern.compile(pattern);
 		Matcher m = p.matcher(sentance);
 		while (m.find()) {
