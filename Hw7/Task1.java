@@ -25,9 +25,7 @@ import java.io.InputStreamReader;
 
             System.out.println ("The longest word is" + ' ' + maxlethWord);
             System.out.println ("Total number of letters is" + ' ' + s.length ());
-        reverseWord = new StringBuilder(word[1]);
-        reverseWord.reverse();
-        System.out.println("Reverse word is:" + ' ' + reverseWord);
+            System.out.println("Reverse word is:" + ' ' + reverseWord);
 
         }
     }
