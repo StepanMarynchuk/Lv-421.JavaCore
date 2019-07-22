@@ -45,6 +45,7 @@ public class Task1 {
                  if (number >= start && number <= end) {
                      return number;
                  }else throw new NumberFormatException ();
+             
          }
 
 }
