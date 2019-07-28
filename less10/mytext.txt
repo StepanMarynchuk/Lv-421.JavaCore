@@ -1,0 +1,11 @@
+Output the "I'm learning Java" text 10 times at intervals of one second (Thread.sleep (1000);).
+Output the two messages "Hello, Peace" and "Peace in the World" 5 times each, at intervals of 2 seconds, 
+and the second - 3 seconds. After typing messages, type "My name ..."
+Prepare mytext.txt file with a lot of text inside.
+Read the context from a file in an array of rows.
+Each element of the array contains one line from the file.
+Do the following:
+1) Count and write down the number of characters per line.
+2) Find the longest and the shortest line.
+3) find and write down only those lines that consist of the word "var"
+var
