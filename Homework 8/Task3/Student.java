@@ -50,6 +50,7 @@ public class Student {
 	public static void printStudents(List<Student> students, Integer course) {
 
 		Iterator<Student> it = students.iterator();
+		
 		List<Student> allStudents = new ArrayList<Student>();
 
 		while (it.hasNext()) {
@@ -57,9 +58,10 @@ public class Student {
 			if (student.getCourse() == (course)) {
 				allStudents.add(student);
 				
-				System.out.println("Names of the students from the list" + "- " + allStudents);
+				//System.out.println("Names of the students from the list" + "- " + allStudents);
 			}
 
 		}
+		System.out.println("Names of the students from the list" + "- " + allStudents);
 	}
 }

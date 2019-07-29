@@ -12,13 +12,17 @@ public class ReadNum {
 
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+		int start = 0;
+		int end = 0;
+		int n = 0;
+
 		try {
 			System.out.println("Enter start range :");
-			int start = Integer.parseInt(br.readLine());
+			start = Integer.parseInt(br.readLine());
 			System.out.println("Enter end range :");
-			int end = Integer.parseInt(br.readLine());
+			end = Integer.parseInt(br.readLine());
 			System.out.println("Enter any number :");
-			int n = Integer.parseInt(br.readLine());
+			n = Integer.parseInt(br.readLine());
 		} catch (NumberFormatException | IOException e) {
 			e.printStackTrace();
 		}
@@ -30,8 +34,8 @@ public class ReadNum {
 	}
 
 	static int readNumber(int x, int y, int z) throws Exception {
-		if (z <= x && z >= y) {
-			throw new Exception(z + "isn't belong to the range");
+		if (z <= x || z >= y) {
+			throw new Exception(z + " " + "isn't belong to the range");
 		}
 		return z;
 
