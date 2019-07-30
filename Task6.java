@@ -3,21 +3,16 @@ import java.io.InputStreamReader;
 
 
 public class Task6 {
-    public int countWords(String s){
 
-        int count=0;
+    public static  int countWords(String s){
 
-            if(!(" ").equals(s.substring(0,1))|| !(" ".equals(s.substring(s.length()-1))))
-                for(int j=0; j <s.length();j++)
-                {
-                    if (s.charAt(j) == ' ') {
-                        count++;
-                    }
-            count = count+1;
-                }
+        String[] str = s.split(" ");
 
-        return count;
-        }
 
+        return str.length;
     }
+
+
+
+}
 
