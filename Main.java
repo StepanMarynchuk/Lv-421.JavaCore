@@ -11,6 +11,10 @@ public class Main {
         int code = Integer.parseInt(br.readLine());
         switch(code){
             case 1:
+                Task1.fibonacci(br);
+                break;
+            case 10:
+                Task10.task10(br);
                 break;
         }
     }
