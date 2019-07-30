@@ -10,12 +10,14 @@ public class Main {
         System.out.println("input task code ");
         int code = Integer.parseInt(br.readLine());
         switch(code){
-            case 1:
-                Task1.fibonacci(br);
-                break;
-            case 10:
-                Task10.task10(br);
-                break;
+//            case 1:
+//                Task1.fibonacci(br);
+//                break;
+//            case 10:
+//                Task10.task10(br);
+//                break;
+            case 12:
+                Task12.task12(br);
         }
     }
 }
