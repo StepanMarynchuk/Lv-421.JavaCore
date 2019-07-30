@@ -4,6 +4,7 @@ import sun.util.resources.LocaleData;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 import java.time.Period;
 import java.util.*;
 
@@ -12,9 +13,13 @@ public class Adults extends Person {
 
     public Adults(String name, String surName, int id, int dateOfBirth) {
         super(name, surName, id, dateOfBirth);
-
     }
- public Adults(BufferedReader bufferedReader){};
+
+
+    public Adults(BufferedReader bufferedReader) {
+    }
+
+    ;
 
 
     @Override

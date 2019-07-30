@@ -50,12 +50,12 @@ public Person(){};
         this.id = id;
     }
 
-    public int getDateOfBirth() {
-        return dateOfBirth;
-    }
-
     public void setDateOfBirth(int dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    public int getDateOfBirth() {
+        return dateOfBirth;
     }
 
     public VisitContent getVisitContent() {
@@ -65,6 +65,7 @@ public Person(){};
     public void setVisitContent(VisitContent visitContent) {
         this.visitContent = visitContent;
     }
+
 
     private    VisitContent visitContent = VisitContent.Vaccination;
 
@@ -92,6 +93,7 @@ public Person(){};
                 ", dateOfBirth=" + dateOfBirth +
                 '}';
     }
+
 //    public  LocaleData ageCalculation(LocaleData dateOfBirth, LocaleData now){
 //       if((dateOfBirth!=null)&&(now!=null)){
 //        return LocaleData(TemporalAdjuster(Period))
