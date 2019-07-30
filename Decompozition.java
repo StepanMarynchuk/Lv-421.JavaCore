@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
     public class Decompozition {
-        public static void main(String[] args) throws IOException {
+        public static void task2() throws IOException {
             int number;
             Scanner sc = new Scanner (System.in);
             System.out.println("Enter a number: ");

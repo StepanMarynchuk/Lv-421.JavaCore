@@ -1,15 +1,16 @@
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 
 public class Task6 {
 
-    public static  int countWords(String s){
+    public static  void countWords(BufferedReader br) throws IOException {
 
+        String s = br.readLine();
         String[] str = s.split(" ");
 
-
-        return str.length;
+        System.out.print (str.length);
     }
 
 

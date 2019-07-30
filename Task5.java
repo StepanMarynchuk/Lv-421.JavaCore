@@ -1,10 +1,8 @@
-package lastlessons;
-
 import java.util.Scanner;
 
 public class Task5 {
 
-	public static void main(String[] args) {
+	public static void task5() {
 
 		String str, rev = "";
 		Scanner sc = new Scanner(System.in);
