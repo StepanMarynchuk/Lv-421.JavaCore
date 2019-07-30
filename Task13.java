@@ -16,11 +16,11 @@ public class Task13 {
                     break;
                 }
             }
-            start+=20;
             if (check) {
                 System.out.println(start);
                 break;
             }
+            start+=20;
         }
         System.out.println("Number " + start);
     }
