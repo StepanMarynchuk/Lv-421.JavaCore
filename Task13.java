@@ -5,22 +5,19 @@ import java.io.IOException;
 
 public class Task13 {
 
-    public static void task13()  {
-        int start = 20;
-        boolean check = true;
+    public static void task13() {
+        int start = 2520;
+        boolean check = false;
 
         while (true) {
-            for (int i = 1; i <= 20; i++) {
-                if (start % i != 0) {
-                    check = false;
-                    break;
-                }
+            if (start % 11 == 0 && start % 13 == 0 && start % 17 == 0 && start % 19 == 0) {
+                check = true;
             }
             if (check) {
                 System.out.println(start);
                 break;
             }
-            start+=20;
+            start += 20;
         }
         System.out.println("Number " + start);
     }
