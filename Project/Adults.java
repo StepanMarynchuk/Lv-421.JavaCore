@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import java.io.Serializable;
 import java.time.Period;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Adults extends Person {
     private VisitContent visitContent;
@@ -30,22 +32,8 @@ public class Adults extends Person {
     public void visitDiscription(BufferedReader br) throws IOException {
         System.out.println("input target and conclusion");
         String s = br.readLine();
-        System.out.println(s);// here I want to add VisitContent at once with the referral
-        //add output Stream Writer!!!!!!!! to save on the disk
-
+        System.out.println(s);
     }
-
-    @Override
-    public int addVisit() {
-        int count = 0;
-        return count++;
-    }
-
-    public static int countVisit() {
-        int count = 0;
-        return count++;
-    }
-
 
     @Override
     public boolean equals(Object obj) {
@@ -56,35 +44,6 @@ public class Adults extends Person {
     public int hashCode() {
         return super.hashCode();
     }
-    /////dubbling list????????/
-//    public VisitContent referral() {
-//        SortedMap<String, VisitContent> referralList = new TreeMap<>();
-//        referralList.put("Dhyptheria", VisitContent.Vaccination);
-//        referralList.put("Hepatitis", VisitContent.Vaccination);
-//        referralList.put("Measles", VisitContent.Vaccination);
-//        referralList.put("Allergists", VisitContent.ReferralToASpecialist);
-//        referralList.put("Cardiologists", VisitContent.ReferralToASpecialist);
-//        referralList.put("Dermatologists", VisitContent.ReferralToASpecialist);
-//        referralList.put("Endocrinologists", VisitContent.ReferralToASpecialist);
-//        referralList.put("Blood Count", VisitContent.ReferralForAnalysis);
-//        referralList.put("Cardiogram", VisitContent.ReferralForAnalysis);
-//        return VisitContent.Vaccination;
-    //  я б хотіла значиння мати в протилежному порядку, типу спочатку вибирати VisitContent направлення,
-    // а потім значення. Is  it correct to use list for this kind of data? or is it better to create switch case?
-
-    // public  static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-//public class AgeCalculator {
-//
-//    public static int calculateAge(LocalDate birthDate, LocalDate currentDate) {
-//        if ((birthDate != null) && (currentDate != null)) {
-//            return Period.between(birthDate, currentDate).getYears();
-//        } else {
-//            return 0;
-//        }
-//    }
-//}
-
 
 }
 

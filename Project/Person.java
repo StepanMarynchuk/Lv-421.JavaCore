@@ -1,30 +1,31 @@
-import sun.util.resources.LocaleData;
 
-import java.text.Format;
-import java.time.Period;
-import java.time.Year;
-import java.time.temporal.TemporalAdjuster;
-import java.util.FormatFlagsConversionMismatchException;
-import java.util.Locale;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public abstract class Person implements Visit  {
+public abstract class Person {
     private String name;
-   private   String surName;
+    private String surName;
     private int id;
-    private int dateOfBirth;//calendar!!!
-public Person(){};
+    private int dateOfBirth;
+
+    public Person() {}
 
     public Person(String name, String surName, int id, int dateOfBirth) {
         this.name = name;
         this.surName = surName;
         this.id = id;
-        this.dateOfBirth=dateOfBirth;
+        this.dateOfBirth = dateOfBirth;
     }
-//    public static int calculateAge(LocaleData birthDate, LocaleData currentDate) {
-//        if((birthDate!=null) && (currentDate!=null)){
-//            return Period.between(birthDate, currentDate).getYears();
-//}
 
+
+    /**this methos checks validation for fields name and surName*/
+    public void checkInfo(String name) throws DataException {
+        String pattern = "[a-z]{1,10}";
+        String text = name;
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(text);
+        if (m.matches() == false) throw new DataException();
+    }
 
     public String getName() {
         return name;
@@ -33,7 +34,6 @@ public Person(){};
     public void setName(String name) {
         this.name = name;
     }
-
     public String getSurName() {
         return surName;
     }
@@ -67,18 +67,17 @@ public Person(){};
     }
 
 
-    private    VisitContent visitContent = VisitContent.Vaccination;
+    private VisitContent visitContent = VisitContent.Vaccination;
 
-/** Method has to add visitor and referral*/
-
-    public abstract int addVisit();
 
     public enum VisitContent {
-        Vaccination(" " ),
+        Vaccination(" "),
         ReferralToASpecialist(" "), ReferralForAnalysis(" ");
+
         VisitContent(String kind) {
         }
     }
+
     /**
      * end user has to input information about the target of the visit and conclusion(referral) of the visit and to save it on the disk
      */
@@ -93,11 +92,11 @@ public Person(){};
                 ", dateOfBirth=" + dateOfBirth +
                 '}';
     }
-
-//    public  LocaleData ageCalculation(LocaleData dateOfBirth, LocaleData now){
-//       if((dateOfBirth!=null)&&(now!=null)){
-//        return LocaleData(TemporalAdjuster(Period))
-//    }
-
-
 }
+
+
+
+
+
+
+
